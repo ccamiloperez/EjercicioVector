@@ -12,12 +12,6 @@ public class NumerosVector {
     List<Integer> listaNumeros = new ArrayList<Integer>();
     Integer[] numeros =new Integer[listaNumeros.size()]; 
     Scanner teclado=new Scanner(System.in);
-
-    public NumerosVector() {
-        
-    }
-    
-      
     
     public void llenarVector(){
         char seleccion;
@@ -30,8 +24,6 @@ public class NumerosVector {
         numeros = listaNumeros.toArray(numeros);   
     } 
     
-    
-    
     public void ordenamiento(){
         int aux;
         for (int i = 0; i<numeros.length-1; i++) {
@@ -43,14 +35,11 @@ public class NumerosVector {
                 }
             }
             
-        }
-    }
-    
-    
-     public void imprimir(){
-    for (int i = 0; i < numeros.length; i++) {
-            System.out.print("  "+numeros[i]);
-        }  
+        }    
+        System.out.print("Los numeros organizados de menor a mayor:");
+        for (int k = 0; k < numeros.length; k++) {
+                System.out.print(" "+numeros[k]);   
+            }
     }
     
     public void numeroMayor(){
@@ -74,5 +63,26 @@ public class NumerosVector {
         }
         System.out.println("el numero menor es:" + menor);
      }
+     
+     public void numerosFaltantes(){
+        List<Integer> numFaltantes = new ArrayList<Integer>();
+        int comparador;
+        comparador=numeros[0];
+        int diferencia;
+        for (int i = 0; i < numeros.length; i++) {
+            diferencia=numeros[i]-comparador;
+            if (diferencia>1) {
+                for (int j = 1; j < diferencia; j++) {
+                    numFaltantes.add(comparador+j);
+                }
+            }
+        comparador=numeros[i];
+     }
+        Integer[] faltantes =new Integer[numFaltantes.size()]; 
+        faltantes = numFaltantes.toArray(faltantes);
+            System.out.println("Los numeros que faltan son:");
+            for (int k = 0; k < faltantes.length; k++) {
+            System.out.print(" "+faltantes[k]);   
+            }
 }
-
+}
