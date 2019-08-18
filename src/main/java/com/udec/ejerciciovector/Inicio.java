@@ -5,11 +5,13 @@
  */
 package com.udec.ejerciciovector;
 /**
- *
+ * Esta es la clase inicio donde se realiza la creacion del objeto y el uso de los metodos de la clase NumerosVector.
  * @author Cristian Perez
  */
 public class Inicio {
-    
+    /**
+     * Constructor de la clase Inicio
+     */
       public Inicio(){
        System.out.println("BIENVENIDO");
        NumerosVector num=new NumerosVector();
@@ -21,5 +23,5 @@ public class Inicio {
        System.out.println("");
        num.numerosFaltantes();
        System.out.println("");
-}
-}
+}//Cierre del constructor.
+}//Cierre de la clase.

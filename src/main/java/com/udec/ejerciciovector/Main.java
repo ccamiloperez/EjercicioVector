@@ -6,7 +6,7 @@
 package com.udec.ejerciciovector;
 
 /**
- *
+ * Esta es la clase main en donde arranca el programa.
  * @author Cristian Perez
  */
 
@@ -16,7 +16,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Inicio a=new Inicio();
+        Inicio iniciar=new Inicio();
     }
     
 }
